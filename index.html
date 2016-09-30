@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="gemStore">
+    <head>
+        <meta charset="utf-8">
+        <title>The Flatlanders Store</title>
+        <link rel="stylesheet" href="public/components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title">
+    </head>
+    <body ng-controller="StoreController as store">
+
+        <div class="product row" ng-repeat="product in store.products">
+            <h3>{{ product.name }}</h3>
+            <em class="pull-right">{{product.price | currency }}</em>
+        </div>
+        <script src="public/components/angular/angular.min.js" charset="utf-8"></script>
+        <script src="public/components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+        <script src="assets/js/app.js" charset="utf-8"></script>
+    </body>
+</html>
